@@ -1,0 +1,32 @@
+body {background-color: white; margin: 0;}
+
+@font-face {font-family: SourceSansPro-Black; src: url(/font/SourceSansPro-Black.ttf); font-display: swap;}
+@font-face {font-family: SourceSansPro-Bold; src: url(/font/SourceSansPro-Bold.ttf); font-display: swap;}
+@font-face {font-family: SourceSansPro-Regular; src: url(/font/SourceSansPro-Regular.ttf); font-display: swap;}
+
+.header {border-bottom: 0.01rem solid rgb(193, 193, 193); padding: 0.5rem 0rem; margin-bottom: 0.5rem;}
+.header div:nth-of-type(1) {position: relative; left: 0.5rem;}
+.header, .header div:nth-of-type(2) {display: flex; align-items: center;}
+.header div:nth-of-type(2) {position: absolute; right: 0.5rem; font-size: 0.5rem; font-family: "SourceSansPro-Regular";}
+.header div:nth-of-type(2) a {padding: 0rem 0.5rem; text-decoration: none; color: inherit;}
+.header div:nth-of-type(2) a:nth-last-of-type(1) {font-family: "SourceSansPro-Bold"}
+.header img {width: 8rem;}
+.main-image {margin: 1rem 1rem 0rem 1rem; padding: 1rem 1rem 0.5rem 1rem;}
+.main-image img {width: 100%;}
+.download {margin: 0 1rem; padding: 0 1rem}
+.download div {display: flex; align-items: center; flex-direction: column;}
+.download div h1 {margin: 0.5rem 0rem; font-size: 1.3rem; text-align: center; width: 75%; font-family: "SourceSansPro-Black";}
+.download div p {margin: 0.5rem; font-size: 0.70em; text-align: center; width: 100%; font-family: "SourceSansPro-Regular";}
+.download div:nth-of-type(2) p {margin: 0 0.5rem; font-size: 0.70rem; text-align: center; width: 100%;}
+.download button {background-color: #03DAC5; color: white; margin: 0.5rem; padding: 0.5rem 4.3rem; border: 0; border-radius: 1rem; font-family: "SourceSansPro-Bold";}
+.download div:nth-of-type(2) div:nth-of-type(1) {margin-top: 0.3rem;}
+.download div:nth-of-type(2) div:nth-of-type(1), .download div:nth-of-type(2) div p {display: flex; flex-direction: row; align-items: center;}
+.download div:nth-of-type(2) div img {width: 100%}
+.download div:nth-of-type(2) div:nth-of-type(2) p {font-size: 0.7rem; margin: 0.8rem 0;}
+.steps {background-color: #F8F8FB; padding: 1rem 1rem; display: flex; flex-direction: column; align-items: center;}
+.steps div:nth-of-type(1) {display: flex; justify-content: center;}
+.steps h1, .chars h1 {font-family: "SourceSansPro-Black"; font-size: 0.9rem; text-align: center; width: 90%;}
+.steps img {width: 100%; padding: 1rem 0rem;}
+.steps div:nth-of-type(3) {display: flex; flex-direction: column; align-items: center;}
+.steps div:nth-of-type(3) button {background-color: #03DAC5; color: white; margin: 0.5rem; padding: 0.5rem 4.3rem; border: 0; border-radius: 1rem; font-family: "SourceSansPro-Bold"}
+.chars {padding: 1rem 1rem; display: flex; flex-direction: column; align-items: center}
