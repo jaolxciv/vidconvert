@@ -64,6 +64,10 @@ footer img {
     width: 8rem;
 }
 
+.main-sec {
+    margin-bottom: 1rem;
+}
+
 .main-image {
     margin: 1rem 1rem 0rem 1rem;
     padding: 1rem 1rem 0.5rem 1rem;
@@ -151,7 +155,7 @@ footer img {
 /* buttons */
 
 .download div:nth-of-type(2) div:nth-of-type(1) {
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
 }
 
 .download div:nth-of-type(2) div:nth-of-type(1),
@@ -222,6 +226,7 @@ footer img {
     border-radius: 1rem;
     margin-bottom: 1rem;
     padding: 1.3rem;
+    box-shadow: 2.5px 2.5px 5px 0px rgb(193, 193, 193)
 }
 
 .labels img {
@@ -238,7 +243,6 @@ footer img {
     padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center
 }
 
 .faqs h1 {
@@ -249,6 +253,35 @@ footer img {
     text-align: center;
     width: 90%;
 }
+
+/* desplegables de FAQs */
+.dropdown {
+    margin-bottom: 10px;
+    border-bottom: 0.01rem solid #000;
+    padding-bottom: 1rem;
+}
+
+.dropdown-button {
+    padding: 0.6rem;
+    font-size: 0.7rem;
+    text-align: left;
+    border: none;
+    background: none;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0;
+}
+
+.dropdown-content.show {
+    max-height: 100px;
+    padding: 10px;
+}
+
+/* desplegables de FAQs */
 
 .install {
     background-color: #B54AEA;
@@ -296,7 +329,10 @@ footer div {
     margin-top: 1rem;
 }
 
+/* MEDIA QUERIES */
+
 @media (min-width: 425px) {
+
     .header {
         padding: 1rem;
     }
@@ -304,7 +340,6 @@ footer div {
     .header div:nth-of-type(2) {
         font-size: 0.8rem;
     }
-
 
     .download div h1 {
         width: auto;
@@ -315,10 +350,13 @@ footer div {
         font-size: 1rem;
     }
 
+    .download div:nth-of-type(3) p {
+        font-size: 0.9rem;
+    }
+
     .labels div {
         padding: 1.8rem;
     }
-
 }
 
 @media (min-width: 512px) {
