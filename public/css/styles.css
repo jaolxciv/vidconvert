@@ -1,52 +1,413 @@
-body {background-color: white; margin: 0;}
+body {
+    background-color: white;
+    margin: 0;
+    font-family: "SourceSansPro-Regular";
+}
 
-@font-face {font-family: SourceSansPro-Black; src: url(/font/SourceSansPro-Black.ttf); font-display: swap;}
-@font-face {font-family: SourceSansPro-Bold; src: url(/font/SourceSansPro-Bold.ttf); font-display: swap;}
-@font-face {font-family: SourceSansPro-Regular; src: url(/font/SourceSansPro-Regular.ttf); font-display: swap;}
+@font-face {
+    font-family: SourceSansPro-Black;
+    src: url(/font/SourceSansPro-Black.ttf);
+    font-display: swap;
+}
 
-.header {border-bottom: 0.01rem solid rgb(193, 193, 193); padding: 0.5rem 0rem; margin-bottom: 0.5rem;}
-.header div:nth-of-type(1) {position: relative; left: 0.5rem;}
-.header, .header div:nth-of-type(2) {display: flex; align-items: center;}
+@font-face {
+    font-family: SourceSansPro-Bold;
+    src: url(/font/SourceSansPro-Bold.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SourceSansPro-Regular;
+    src: url(/font/SourceSansPro-Regular.ttf);
+    font-display: swap;
+}
+
+.header {
+    border-bottom: 0.01rem solid rgb(193, 193, 193);
+    padding: 0.5rem 0rem;
+    margin-bottom: 0.5rem;
+}
+
+.header div:nth-of-type(1) {
+    position: relative;
+    left: 0.5rem;
+}
+
+.header,
+.header div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+}
 
 /* language */
-.header div:nth-of-type(2) {position: absolute; right: 0.5rem; font-size: 0.5rem; font-family: "SourceSansPro-Regular";}
-.header div:nth-of-type(2) a {padding: 0rem 0.5rem; text-decoration: none; color: inherit;}
-.header div:nth-of-type(2) a:nth-last-of-type(1) {font-family: "SourceSansPro-Bold"}
+.header div:nth-of-type(2) {
+    position: absolute;
+    right: 0.5rem;
+    font-size: 0.5rem;
+    font-family: "SourceSansPro-Regular";
+}
+
+.header div:nth-of-type(2) a {
+    padding: 0rem 0.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header div:nth-of-type(2) a:nth-last-of-type(1) {
+    font-family: "SourceSansPro-Bold"
+}
+
 /* language */
 
-.header img, footer img {width: 8rem;}
-.main-image {margin: 1rem 1rem 0rem 1rem; padding: 1rem 1rem 0.5rem 1rem;}
-.main-image img {width: 100%;}
-.download {margin: 0 1rem; padding: 0 0.5rem}
-.download div {display: flex; align-items: center; flex-direction: column;}
-.download div h1 {margin: 0.5rem 0rem; font-size: 1.3rem; text-align: center; width: 75%; font-family: "SourceSansPro-Black";}
-.download div p {margin: 0.5rem; font-size: 0.70em; text-align: center; width: 100%; font-family: "SourceSansPro-Regular";}
-.download div:nth-of-type(2) p {margin: 0 0.5rem; font-size: 0.70rem; text-align: center; width: 100%;}
+.header img,
+footer img {
+    width: 8rem;
+}
+
+.main-image {
+    margin: 1rem 1rem 0rem 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.main-image img {
+    width: 100%;
+}
+
+.download {
+    margin: 0 1rem;
+    padding: 0 0.5rem
+}
+
+.download div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.download div h1 {
+    margin: 0.5rem 0rem;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 75%;
+    font-family: "SourceSansPro-Black";
+}
+
+.download div p {
+    margin: 0.5rem;
+    font-size: 0.70em;
+    text-align: center;
+    width: 100%;
+    font-family: "SourceSansPro-Regular";
+}
+
+.download div:nth-of-type(2) p {
+    margin: 0 0.5rem;
+    font-size: 0.70rem;
+    text-align: center;
+    width: 100%;
+}
 
 /* buttons */
-.download button, .steps button, .chars button, .install button {background-color: #03DAC5; color: white; margin: 0.5rem; padding: 0.5rem 4.3rem; border: 1px solid #03DAC5; border-radius: 1rem; font-family: "SourceSansPro-Bold"; transition: 350ms all;}
-.download button:hover, .steps button:hover, .chars button:hover, .install button:hover {background-color:white; color: #03DAC5; border-color: #03DAC5;}
+.download button,
+.steps button,
+.chars button,
+.install button {
+    background-color: #03DAC5;
+    color: white;
+    margin: 0.5rem;
+    padding: 0.5rem 4.3rem;
+    border: 1px solid #03DAC5;
+    border-radius: 1rem;
+    font-family: "SourceSansPro-Bold";
+    transition: 350ms all;
+}
 
-.install button {background-color: #03DAC5; color: white; margin-top: 0.5rem; padding: 0.5rem 5.2rem; border: 1px solid #03DAC5; border-radius: 1rem; font-family: "SourceSansPro-Bold"; transition: 350ms all;}
-.install button:hover {background-color:white; color: #03DAC5; border-color: #03DAC5;}
+.download button:hover,
+.steps button:hover,
+.chars button:hover,
+.install button:hover {
+    background-color: white;
+    color: #03DAC5;
+    border-color: #03DAC5;
+}
+
+.install button {
+    background-color: #03DAC5;
+    color: white;
+    margin-top: 0.5rem;
+    padding: 0.5rem 5.2rem;
+    border: 1px solid #03DAC5;
+    border-radius: 1rem;
+    font-family: "SourceSansPro-Bold";
+    transition: 350ms all;
+}
+
+.install button:hover {
+    background-color: white;
+    color: #03DAC5;
+    border-color: #03DAC5;
+}
+
 /* buttons */
 
-.download div:nth-of-type(2) div:nth-of-type(1) {margin-top: 0.3rem;}
-.download div:nth-of-type(2) div:nth-of-type(1), .download div:nth-of-type(2) div p {display: flex; flex-direction: row; align-items: center;}
-.download div:nth-of-type(2) div img {width: 100%}
-.download div:nth-of-type(2) div:nth-of-type(2) p {font-size: 0.7rem; margin: 0.8rem 0;}
-.steps {background-color: #F8F8FB; padding: 1rem 1rem; display: flex; flex-direction: column; align-items: center;}
-.steps div:nth-of-type(1) {display: flex; justify-content: center;}
-.steps h1, .chars h1 {font-family: "SourceSansPro-Black"; font-size: 0.9rem; text-align: center; width: 90%;}
-.steps img {width: 100%; padding: 1rem 0rem;}
-.steps div:nth-of-type(3) {display: flex; flex-direction: column; align-items: center;}
-.chars {padding: 1rem 1rem; display: flex; flex-direction: column; align-items: center}
-.faqs {background-color: #F8F8FB; padding: 1rem 1rem; display: flex; flex-direction: column; align-items: center}
-.faqs h1 {margin: 0; padding: 1rem; font-family: "SourceSansPro-Bold"; font-size: 0.9rem; text-align: center; width: 90%;}
-.install {background-color: #B54AEA; padding: 1rem 1rem; display: flex; flex-direction: column; align-items: center;}
-.install h1 {margin: 0; padding-top: 1.3rem; color: white; font-family: "SourceSansPro-Bold"; font-size: 0.9rem; text-align: center; width: 90%;}
-.install p {margin: 0; padding: 0.5rem 0; color: white; font-family: "SourceSansPro-Regular"; font-size: 0.7rem; text-align: center; width: 90%;}
+.download div:nth-of-type(2) div:nth-of-type(1) {
+    margin-top: 0.3rem;
+}
 
-footer {padding: 1rem 1rem; display: flex; flex-direction: column;}
-footer a {padding: 0.3rem 0; text-decoration: none; color: inherit; font-family: "SourceSansPro-Regular"; font-size: 0.8rem;}
-footer div {margin-top: 1rem;}
+.download div:nth-of-type(2) div:nth-of-type(1),
+.download div:nth-of-type(2) div p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.download div:nth-of-type(2) div img {
+    width: 100%
+}
+
+.download div:nth-of-type(2) div:nth-of-type(2) p {
+    font-size: 0.7rem;
+    margin: 0.8rem 0;
+}
+
+.steps {
+    background-color: #F8F8FB;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.steps div:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+}
+
+.steps h1,
+.chars h1 {
+    font-family: "SourceSansPro-Black";
+    font-size: 0.9rem;
+    text-align: center;
+    width: 90%;
+}
+
+.steps img {
+    width: 100%;
+    padding: 1rem 0rem;
+}
+
+.steps div:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chars {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .chars div {display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #F8F8FB; width: 15rem; border-radius: 1rem; margin-bottom: 1rem; padding: 1.3rem;}
+.chars img {width: 2rem;}
+.chars p {font-size: 0.7rem; margin: 1rem 0 0 0;} */
+.labels div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8F8FB;
+    width: 15rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.3rem;
+}
+
+.labels img {
+    width: 2rem;
+}
+
+.labels p {
+    font-size: 0.7rem;
+    margin: 1rem 0 0 0;
+}
+
+.faqs {
+    background-color: #F8F8FB;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.faqs h1 {
+    margin: 0;
+    padding: 1rem;
+    font-family: "SourceSansPro-Bold";
+    font-size: 0.9rem;
+    text-align: center;
+    width: 90%;
+}
+
+.install {
+    background-color: #B54AEA;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.install h1 {
+    margin: 0;
+    padding-top: 1.3rem;
+    color: white;
+    font-family: "SourceSansPro-Bold";
+    font-size: 0.9rem;
+    text-align: center;
+    width: 90%;
+}
+
+.install p {
+    margin: 0;
+    padding: 0.5rem 0;
+    color: white;
+    font-family: "SourceSansPro-Regular";
+    font-size: 0.7rem;
+    text-align: center;
+    width: 90%;
+}
+
+footer {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer a {
+    padding: 0.3rem 0;
+    text-decoration: none;
+    color: inherit;
+    font-family: "SourceSansPro-Regular";
+    font-size: 0.8rem;
+}
+
+footer div {
+    margin-top: 1rem;
+}
+
+@media (min-width: 425px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .header div:nth-of-type(2) {
+        font-size: 0.8rem;
+    }
+
+
+    .download div h1 {
+        width: auto;
+        font-size: 2rem;
+    }
+
+    .download div p {
+        font-size: 1rem;
+    }
+
+    .labels div {
+        padding: 1.8rem;
+    }
+
+}
+
+@media (min-width: 512px) {
+    .labels {
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-sec {
+        display: flex;
+        flex-direction: row-reverse;
+        /* padding: 1rem 1rem; */
+    }
+
+    .download div h1 {
+        width: 100%;
+        text-align: left;
+    }
+
+    .download div p {
+        margin: 0 0.5rem;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .labels {
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .header img,
+    footer img {
+        width: 15rem;
+    }
+
+    .header div:nth-of-type(2) {
+        position: absolute;
+        right: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .main-sec {
+        padding: 2.5rem 2.5rem 0 2.5rem;
+        margin: 2.5rem 2.5rem 0 2.5rem;
+    }
+
+    .download {
+        margin: 0 0 0 5rem;
+    }
+
+    .download div {
+        align-items: flex-start;
+        width: 85%;
+    }
+
+    .download div h1 {
+        margin: 0.5rem 0rem;
+        font-size: 3rem;
+    }
+
+    .download div p {
+        font-size: 1.9rem;
+        margin: 0;
+    }
+
+    .download div:nth-of-type(3) p {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .main-image {
+        margin: 0;
+        padding: 0;
+    }
+
+}
