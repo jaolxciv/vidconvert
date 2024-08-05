@@ -66,6 +66,10 @@ footer img {
 
 .main-sec {
   margin-bottom: 1rem;
+  /* usar para que los margins se ajusten solos, quitar los paddings y margins de los contenedores dentro */
+  /* width: 90%;
+  margin: auto; */
+  /* usar para que los margins se ajusten solos, quitar los paddings y margins de los contenedores dentro */
 }
 
 .main-image {
@@ -331,13 +335,70 @@ footer div {
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 375px) {.download div h1 {font-size: 2rem;}}
+@media screen and (min-width: 375px) {
+  .download div h1 {
+    font-size: 2rem;
+  }
+}
 
-@media screen and (min-width: 425px) {.header {padding: 1rem;} .header div:nth-of-type(2) {font-size: 0.8rem;}.download div h1 {width: auto; font-size: 2rem;} .download div p { font-size: 1rem;} .download div:nth-of-type(3) p {font-size: 0.9rem;}.labels div {padding: 1.8rem;}}
+@media screen and (min-width: 425px) {
+  .header {
+    padding: 1rem;
+  }
 
-@media screen and (min-width: 512px) {.labels {display: flex; justify-content: space-around; flex-wrap: wrap;} .labels div {width: 10rem;} .labels p {text-align: center;}}
+  .header div:nth-of-type(2) {
+    font-size: 0.8rem;
+  }
 
-@media screen and (min-width: 685px) {.labels {display: flex; align-content: center; flex-wrap: wrap;} .labels div {width: 9.2rem;} .labels p {text-align: center;}}
+  .download div h1 {
+    width: auto;
+    font-size: 2rem;
+  }
+
+  .download div p {
+    font-size: 1rem;
+  }
+
+  .download div:nth-of-type(3) p {
+    font-size: 0.9rem;
+  }
+
+  .labels div {
+    padding: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 512px) {
+  .labels {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .labels div {
+    width: 10rem;
+  }
+
+  .labels p {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 685px) {
+  .labels {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .labels div {
+    width: 9.2rem;
+  }
+
+  .labels p {
+    text-align: center;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .main-sec {
@@ -356,7 +417,11 @@ footer div {
     padding: 1rem 0 1rem 1rem;
   }
 
-  .download div {align-items: flex-start;}
+  .download div:nth-of-type(2) {
+    background-color: pink;
+    /* align-items: flex-start; */
+    flex-direction: row;
+  }
 
   .download div h1 {
     width: 100%;
@@ -373,10 +438,11 @@ footer div {
   .main-sec {
     padding: 1rem 1rem 0 1rem;
     margin: 1rem 1rem 0 1rem;
-}
+  }
 
   .download div h1 {
-    font-size: 2.3rem;}
+    font-size: 2.3rem;
+  }
 
   .labels {
     display: flex;
