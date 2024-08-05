@@ -363,7 +363,6 @@ footer div {
   .labels {
     display: flex;
     align-content: center;
-    justify-content: space-evenly;
     flex-wrap: wrap;
   }
 }
@@ -419,7 +418,8 @@ footer div {
   }
 
   .download {
-    margin: 0 0 0 5rem;
+    margin: 1rem 0 0 5rem;
+    padding: 1rem 0 1rem 1rem;
   }
 
   .download div {
@@ -448,7 +448,7 @@ footer div {
     display: flex;
     flex-direction: row;
     align-items: center;
-  } */
+  } */ no se hacer funcionar esto
   /* no se hacer funcionar esto */
 
 
