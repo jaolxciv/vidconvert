@@ -331,41 +331,13 @@ footer div {
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 375px) {.download div h1 {font-size: 2rem;}}
 
-  .header {
-    padding: 1rem;
-  }
+@media screen and (min-width: 425px) {.header {padding: 1rem;} .header div:nth-of-type(2) {font-size: 0.8rem;}.download div h1 {width: auto; font-size: 2rem;} .download div p { font-size: 1rem;} .download div:nth-of-type(3) p {font-size: 0.9rem;}.labels div {padding: 1.8rem;}}
 
-  .header div:nth-of-type(2) {
-    font-size: 0.8rem;
-  }
+@media screen and (min-width: 512px) {.labels {display: flex; justify-content: space-around; flex-wrap: wrap;} .labels div {width: 10rem;} .labels p {text-align: center;}}
 
-  .download div h1 {
-    width: auto;
-    font-size: 2rem;
-  }
-
-  .download div p {
-    font-size: 1rem;
-  }
-
-  .download div:nth-of-type(3) p {
-    font-size: 0.9rem;
-  }
-
-  .labels div {
-    padding: 1.8rem;
-  }
-}
-
-@media screen and (min-width: 512px) {
-  .labels {
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-  }
-}
+@media screen and (min-width: 685px) {.labels {display: flex; align-content: center; flex-wrap: wrap;} .labels div {width: 9.2rem;} .labels p {text-align: center;}}
 
 @media screen and (min-width: 768px) {
   .main-sec {
@@ -379,23 +351,42 @@ footer div {
     width: 65%
   }
 
+  .download {
+    margin: 1rem 0 0 2rem;
+    padding: 1rem 0 1rem 1rem;
+  }
+
+  .download div {align-items: flex-start;}
+
   .download div h1 {
     width: 100%;
     text-align: left;
   }
 
   .download div p {
-    margin: 0 0.5rem;
     text-align: left;
   }
 }
 
 @media (min-width: 1024px) {
+
+  .main-sec {
+    padding: 1rem 1rem 0 1rem;
+    margin: 1rem 1rem 0 1rem;
+}
+
+  .download div h1 {
+    font-size: 2.3rem;}
+
   .labels {
     display: flex;
     align-content: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+  }
+
+  .labels div {
+    width: 15rem;
   }
 }
 
@@ -413,8 +404,8 @@ footer div {
   }
 
   .main-sec {
-    padding: 2.5rem 2.5rem 0 2.5rem;
-    margin: 2.5rem 2.5rem 0 2.5rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    margin: 1.5rem 1.5rem 0 1.5rem;
   }
 
   .download {
@@ -442,14 +433,18 @@ footer div {
     font-size: 1rem;
   }
 
+  .labels div {
+    width: 20rem;
+  }
 
-  /* no se hacer funcionar esto */
-  /* .rating {
+
+  /* no se hacer funcionar esto
+  rating {
     display: flex;
     flex-direction: row;
     align-items: center;
-  } */ no se hacer funcionar esto
-  /* no se hacer funcionar esto */
+  }
+no se hacer funcionar esto */
 
 
   .main-image {
