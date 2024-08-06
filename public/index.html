@@ -7,13 +7,20 @@
   <title>Vidconvert</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="/img/favicon.png" type="image/png">
-  <script src="/js/script.js"></script>
 </head>
 
 <body>
   <header>
+    <!-- No hace falta añadir section espues de un header. El header ya es en si una section -->
     <section class="header">
-      <div><a href="/index.html"><img src="/img/logo_new_vidconvert.png" alt="vidconvert-logo"></a></div>
+      <!-- no haria falta el div en este caso, ademas intenta dejar lo menos posible en linea cuando hay varias etiquetas -->
+      <!-- ahora no esta preparado pero en el futuo no hara falta añadir index.html -->
+      <div>
+        <a href="/index.html">
+          <!-- las imagenes deben llevar alt, width y height y ademas si añades un atributo title con un texto, cuando pases por encima de la imagen aparece ese texto, a veces lo hacemos, es descriptivo  -->
+          <img src="/img/logo_new_vidconvert.png" alt="vidconvert-logo">
+        </a>
+      </div>
       <div>
         <a href="/lang/de.html">DE</a>
         <p>|</p>
@@ -26,36 +33,53 @@
       <div class="main-image">
         <img src="/img/header-lp2.png" alt="main-image">
       </div>
+      <!-- a esta seccion se le llama cta (call to action), solemos usarlo de nombre aqui para las clases por ejemplo -->
       <div class="download">
+        <!-- como te dije, en este caso este div no seria necesario porque siempre va a estar uno encima del otro -->
         <div>
           <h1>Your fast and secure download manager</h1>
           <p>Download music and videos from all popular websites!</p>
         </div>
         <div class="rating">
+          <!-- como te explique, o button o a, en el presente usamos a, en el futuo habra q usar button por la accesibilidad -->
+          <!-- esto nos pasara a veces, tendremos el codigo preparado pero sin el enlace, dejalo vacio o po # para cuando nos den el link, 
+          sea mas facil buscar y detectar donde estan los vacios -->
           <a href="/download/download.html"><button type="button">FREE DOWNLOAD</button></a>
-          <div><img src="/img/stars.png" alt="rating-stars">
+          <div>
+            <img src="/img/stars.png" alt="rating-stars">
+            <!-- aqui si pones un span en vez de un p, te ahorras quitar los margin -->
             <p>4,9</p>
           </div>
         </div>
+        <!-- esto igual, podria ir sin div -->
         <div>
           <p>Supports Windows 7, 8, 8.1, 10 and 11</p>
         </div>
       </div>
     </section>
     <section class="steps">
+      <!-- podria ir el h1 sin div -->
+      <!-- SOLO PUEDE HABER UN H1 EN CADA PAGINA, LO DEMAS SERAN H2, H3.... EL H1 SE RESERVA PARA EL CALL TO ACTION -->
       <div>
         <h1>Downloading videos has never been easier. Turn links into files in seconds.</h1>
       </div>
+      <!-- ME ENCANTA! NO LO CONOCIA, Y ME HAS SOLUCIONADO QUIZAS UN PORBLEMA DE UNA COSA QUE TENIA QUE PENSAR COMO HACERLO Y QUE AUN NO ME HABIA PUESTO A ELLO, LO VAMOS A EMPEZAR A IMPLEMENTAR ASI! -->
       <picture>
         <source srcset="/img/steps-lp2_en.png" media="(min-width: 512px)">
         <img src="/img/steps-lp2_en_vertical.png" alt="steps">
       </picture>
+      <!-- aqui te sobre un div (y solo o un a o un button) y ya te digo que es bueno que cuando tenemos botones asi "sueltos" envolverlos en un div para hacerle flex y asi lo colocamos como queremos -->
       <div>
-        <div><a href="/download/download.html"><button type="button">FREE DOWNLOAD</button></a></div>
+        <div>
+          <a href="/download/download.html"><button type="button">FREE DOWNLOAD</button></a>
+        </div>
       </div>
     </section>
     <section class="chars">
       <h1>Choose wisely: free, fast and secure software</h1>
+      <!-- hay palabras que estan prohibidas usar ya que pertenecen al propio codigo, no se si label  lo es, 
+      pero me ha hecho recordar esta norma, si buescas info en internet te salen listas  y porqués, pero es un poco de logica...ya lo veras -->
+      <!-- MUY BIEN LA LOGICA E IMPLEMENTACION DE DIV PADRE, PEQUEÑOS DIV E IMG Y P EN CADA UNO, ASI SE HACE! -->
       <div class="labels">
         <div>
           <img src="/img/icon-format.png" alt="icon-format">
@@ -91,7 +115,7 @@
         <div class="dropdown-content">
           <p>Yes, with the video downloader yo can download both videos and music. You can then easily convert the file
             and save it in one of the following formats: MP3, WAV, MP4, MKV, AVI, WMV and even GIF.</p>
-        </div>
+          </div>
       </div>
       <div class="dropdown">
         <button class="dropdown-button">Does the video downloader also support MacOS?</button>
@@ -104,23 +128,27 @@
         <div class="dropdown-content">
           <p>Yes, simply add the link to your favorite playlist and download all songs for free. Additionally, the video
             downloader lets you monitor your palylist and automatically keeps it up to date.</p>
+          </div>
         </div>
-      </div>
-
-    </section>
-    <section class="install">
+        
+      </section>
+      <section class="install">
       <h1>How to install Vidconvert?</h1>
       <p>Download your favorite music and video for free!</p>
       <a href="/download/download.html"><button type="button">FREE DOWNLOAD</button></a>
     </section>
   </main>
   <footer>
+    <!-- veo que no esta colocado, es porque no has terminado imagino -->
     <a href="/imprint.html">Imprint</a>
     <a href="/privacy-policy.html">Privacy Policy</a>
     <a href="/eula.html">EULA</a>
     <a href="/uninstall.html">Uninstall</a>
-    <div><a href="/index.html"><img src="/img/logo_new_vidconvert.png" alt="vidconvert-logo"></a></div>
+    <div>
+      <a href="/index.html"><img src="/img/logo_new_vidconvert.png" alt="vidconvert-logo"></a>
+    </div>
   </footer>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>
