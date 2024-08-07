@@ -7,7 +7,9 @@
   <title>Vidconvert</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="/img/favicon.png" type="image/png">
-  <script src="/js/script.js"></script>
+  <script src="/js/script.js" defer></script> <!-- se usa defer para que el <script> no se cargue prematuro y provoque 
+    problemas de ejecución, también se puede optar por dejar la etiqueta <script> al final del documento HTML o agregar 
+    esta línea al codigo JS: document.addEventListener("DOMContentLoaded", function() {});-->
 </head>
 
 <body>
@@ -22,6 +24,9 @@
     </section>
   </header>
   <main>
+    <button class="top-scroll-btn" alt="scroll-to-top">
+      <img src="/img/arrow.svg">
+    </button>
     <section class="main-sec">
       <div class="main-image">
         <img src="/img/header-lp2.png" alt="main-image">
@@ -32,7 +37,7 @@
           <p>Download music and videos from all popular websites!</p>
         </div>
         <div class="rating">
-          <a href="/download/download.html"><button type="button">FREE DOWNLOAD</button></a>
+          <button type="button" class="download-btn" data-url="/download/download.html">FREE DOWNLOAD</button>
           <div><img src="/img/stars.png" alt="rating-stars">
             <p>4,9</p>
           </div>
@@ -51,7 +56,7 @@
         <img src="/img/steps-lp2_en_vertical.png" alt="steps">
       </picture>
       <div>
-        <div><a href="/download/download.html"><button type="button">FREE DOWNLOAD</button></a></div>
+        <div><button type="button" class="download-btn" data-url="/download/download.html">FREE DOWNLOAD</button></div>
       </div>
     </section>
     <section class="chars">
@@ -66,7 +71,7 @@
           <p>Easy Download</p>
         </div>
         <div>
-          <img src="/img/icon-noad.png" atl="no-advertisement-logo">
+          <img src="/img/icon-noad.png" alt="no-advertisement-logo">
           <p>No Advertisement</p>
         </div>
         <div>
@@ -82,11 +87,27 @@
           <p>No Download limit</p>
         </div>
       </div>
-      <a href="/download/download.html"><button type="button">FREE DOWNLOAD</button></a>
+      <button type="button" class="download-btn" data-url="/download/download.html">FREE DOWNLOAD</button>
     </section>
     <section class="faqs">
       <h1>Vidconvert FAQs</h1>
-      <div class="dropdown">
+      <details>
+        <summary>Can I convert videos into music files with Vidconvert?</summary>
+        <p>Yes, with the video downloader yo can download both videos and music. You can then easily convert the file
+          and save it in one of the following formats: MP3, WAV, MP4, MKV, AVI, WMV and even GIF.</p>
+      </details>
+
+      <details>
+        <summary>Does the video downloader also support MacOS?</summary>
+        <p>No, unfortunately, the tool can currently only be used on Windows computers.</p>
+      </details>
+
+      <details>
+        <summary>Can I download entide playlists with Vidconvert?</summary>
+        <p>Yes, simply add the link to your favorite playlist and download all songs for free. Additionally, the video
+          downloader lets you monitor your palylist and automatically keeps it up to date.</p>
+      </details>
+      <!-- <div class="dropdown">
         <button class="dropdown-button">Can I convert videos into music files with Vidconvert?</button>
         <div class="dropdown-content">
           <p>Yes, with the video downloader yo can download both videos and music. You can then easily convert the file
@@ -105,13 +126,12 @@
           <p>Yes, simply add the link to your favorite playlist and download all songs for free. Additionally, the video
             downloader lets you monitor your palylist and automatically keeps it up to date.</p>
         </div>
-      </div>
-
+      </div> -->
     </section>
     <section class="install">
       <h1>How to install Vidconvert?</h1>
       <p>Download your favorite music and video for free!</p>
-      <a href="/download/download.html"><button type="button">FREE DOWNLOAD</button></a>
+      <button type="button" class="download-btn" data-url="/download/download.html">FREE DOWNLOAD</button>
     </section>
   </main>
   <footer>

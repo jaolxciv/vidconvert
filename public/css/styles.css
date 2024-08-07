@@ -64,6 +64,41 @@ footer img {
   width: 8rem;
 }
 
+/* TOP SCROLL BUTTON */
+.top-scroll-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #03DAC5;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  padding: 0.8rem;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.top-scroll-btn.show {
+  opacity: 1;
+}
+
+.top-scroll-btn img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: rotate(90deg);
+}
+
+.top-scroll-btn:hover {
+  opacity: 0.8;
+}
+
+
+/* TOP SCROLL BUTTON */
+
 .main-sec {
   margin-bottom: 1rem;
   /* usar para que los margins se ajusten solos, quitar los paddings y margins de los contenedores dentro */
@@ -128,6 +163,7 @@ footer img {
   border-radius: 1rem;
   font-family: "SourceSansPro-Bold";
   transition: 350ms all;
+  cursor: pointer;
 }
 
 .download button:hover,
@@ -259,7 +295,52 @@ footer img {
 }
 
 /* desplegables de FAQs */
-.dropdown {
+summary {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  padding-bottom: 1rem;
+}
+
+details summary {
+  border-bottom: 0.01rem solid #000;
+
+}
+
+details[open] summary {
+  border-bottom: none;
+  margin: 0;
+}
+
+summary::after {
+  content: "+";
+  color: #B54AEA;
+}
+
+details[open] summary::after {
+  content: "-";
+}
+
+details[open]>p {
+  border-bottom: 0.01rem solid #000;
+  padding-bottom: 1rem;
+  margin: 0;
+  padding: 1rem 0.5rem;
+}
+
+details>p {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+
+}
+
+/* desplegables de FAQs */
+
+/* desplegables de FAQs */
+/* .dropdown {
   margin-bottom: 10px;
   border-bottom: 0.01rem solid #000;
   padding-bottom: 1rem;
@@ -283,8 +364,7 @@ footer img {
 .dropdown-content.show {
   max-height: 100px;
   padding: 10px;
-}
-
+} */
 /* desplegables de FAQs */
 
 .install {
@@ -418,7 +498,6 @@ footer div {
   }
 
   .download div:nth-of-type(2) {
-    background-color: pink;
     /* align-items: flex-start; */
     flex-direction: row;
   }
@@ -453,6 +532,13 @@ footer div {
 
   .labels div {
     width: 15rem;
+  }
+}
+
+@media (min-width: 1216px) {
+
+  .labels {
+    margin: 0 1.5rem;
   }
 }
 
@@ -494,24 +580,24 @@ footer div {
     margin: 0;
   }
 
+  .download div:nth-of-type(2) {
+    margin-top: 1rem;
+    font-size: 1rem;
+    align-items: center;
+  }
+
   .download div:nth-of-type(3) p {
     margin-top: 1rem;
     font-size: 1rem;
   }
 
+  .labels {
+    margin: 0 2.5rem;
+  }
+
   .labels div {
     width: 20rem;
   }
-
-
-  /* no se hacer funcionar esto
-  rating {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-no se hacer funcionar esto */
-
 
   .main-image {
     margin: 0;
